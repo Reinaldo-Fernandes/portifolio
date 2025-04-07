@@ -290,7 +290,7 @@
   .about-content a {
     display: inline-block;
     margin-top: 0.5rem;
-    background-color: #0077b5;
+    background-color: #0077b5 !important;
     color: white;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
@@ -372,7 +372,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #333;
+  background-color: #020202;
   color: #fff;
   width: 48px;
   height: 48px;
