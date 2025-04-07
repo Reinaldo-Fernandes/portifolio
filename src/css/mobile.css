@@ -51,8 +51,12 @@ main {
 
 /* BOTÕES SOCIAIS */
 .social-buttons {
-  justify-content: flex-start;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  flex-wrap: wrap;           
+  width: 100%;
+  text-align: center;
 }
 
 /* SOBRE MIM E PROJETOS */
@@ -61,7 +65,10 @@ main {
   padding: 0.3rem;
   font-size: 1rem;
   margin-top: 0;
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 5rem;display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* FOOTER */
