@@ -1,33 +1,73 @@
 /* mobile.css */
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Conteúdo principal ocupa o espaço restante */
+main {
+  flex: 1;
+}
+
 .bento-grid {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .logo {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .profile-card img {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .social-buttons {
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-  
-  .about-card,
-  .project-card {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
-  
+  grid-template-columns: 2fr;
+  padding: 0.9rem;
+}
+
+/* NAVBAR */
+.navbar {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  height: auto;
+}
+
+.logo {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar a {
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+/* PERFIL */
+.profile-card img {
+  width: 60px;
+  height: 60px;
+}
+
+/* BOTÕES SOCIAIS */
+.social-buttons {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* SOBRE MIM E PROJETOS */
+.about-card,
+.project-card {
+  padding: 0.3rem;
+  font-size: 1rem;
+  margin-top: 0;
+  scroll-margin-top: 5rem;
+}
+
+/* FOOTER */
+footer {
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
