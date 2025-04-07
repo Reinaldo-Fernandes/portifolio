@@ -391,6 +391,16 @@
   transform: scale(1.1);
 }
 
+/* LinkedIn estilo azul */
+.linkedin-btn {
+  background-color: #0077b5;
+}
+
+.linkedin-btn:hover {
+  background-color: #005582;
+  transform: scale(1.1);
+}
+
 /* Instagram estilo gradiente */
 .instagram-btn {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
