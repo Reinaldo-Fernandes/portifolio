@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <head>
+    <!-- Metadados básicos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Reinaldo</title>
+  
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+  
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/src/css/reset.css" />
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 768px)" />
+  
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-terminal"></i>
+      <span class="name"> Reinaldo Fernandes </span>
+      <div class="profile-card" id="profileCard">
+        <img id="profileImage" src="src/image/N2.jpg" alt="Foto de Reinaldo">
+      </div>
+    </div>
+  </nav>
+  
+      
+  <main class="bento-grid">
+
+     <!-- Sobre Mim -->
+     <div class="about-card glow-card fade-in">
+      <div class="about-card">
+        <div class="about-content">
+          <h2 class="description">Sobre Mim</h2>
+          <p >
+            Olá! Me chamo Reinaldo Neto, sou desenvolvedor apaixonado por transformar ideias em experiências digitais reais. Trabalho com HTML, CSS, JavaScript e estou sempre buscando aprender mais sobre o ecossistema web moderno.
+          </p>
+          <p>
+            Já atuei com montagem de computadores, projetos de sites, automação e criação de experiências interativas — e estou sempre aberto a novas colaborações!
+          </p>
+          <div class="social-buttons">
+            <a href="https://github.com/Reinaldo-Fernandes" target="_blank" class="github-btn">
+              <i class="fab fa-github"></i> 
+            </a>
+            <a href="https://www.instagram.com/reinaldo.f.menezes/" target="_blank" class="instagram-btn">
+              <i class="fab fa-instagram"></i> 
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <!-- Projetos  -->
+    <div class="project-card">
+      <div class="card-image">
+        <source srcset="src/image/curriculo.png " media="(min-width: 768px)">
+        <img src="src/image/curriculocel.png  "  alt="Projeto 1">
+      </div>
+      <div class="card-content">
+        <h3>Currículo Fácil </h3>
+        <p>#Bem-vindo ao Criador de Currículos - uma página projetada para simplificar a criação de currículos profissionais e personalizados! Com uma interface intuitiva e funcionalidades práticas, nossa ferramenta permite que você desenvolva currículos impressionantes em minutos.</p>
+        <a href="https://curriculo-facil.vercel.app/"  target="_blank">Ver Projeto</a>
+      </div>
+      
+    </div>
+
+    <div class="project-card">
+      <div class="card-image">
+        <source srcset="src/image/em breve.gif " media="(min-width: 768px)">
+        <img src="src/image/em breve.gif"  alt="Projeto 1">
+      </div>
+      <div class="card-content">
+        <h3>Proximos Projetos</h3>
+        <p>#Em Breve...</p>
+      </div>
+      
+    </div>
+    
+  </main>
+
+  <footer>
+    <p>© 2025 Reinaldo Neto</p>
+  </footer>
+
+  <script src="/src/js/script.js"></script>
+</body>
+</html>

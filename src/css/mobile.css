@@ -1,0 +1,33 @@
+/* mobile.css */
+
+.bento-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-card img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .social-buttons {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  .about-card,
+  .project-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  
