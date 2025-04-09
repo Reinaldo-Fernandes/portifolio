@@ -87,6 +87,7 @@
   /* Empurra o conteúdo abaixo da navbar */
   main {
     margin-top: 90px;
+    padding-bottom: 80px;
   }
   
   
@@ -119,6 +120,14 @@
     transform: translateY(-5px);
   }
   
+  .projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
   .project-card {
     background-color: #fff;
     border-radius: 1.5rem;
@@ -416,6 +425,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
+    height: 40px;
     width: 100%;
     background: rgb(255, 255, 255);
     padding: 1rem 0;
