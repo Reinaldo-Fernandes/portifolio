@@ -1,4 +1,3 @@
-/* mobile.css */
 
 html, body {
   height: 100%;
@@ -13,14 +12,19 @@ body {
   min-height: 100vh;
 }
 
-/* Conteúdo principal ocupa o espaço restante */
+
 main {
   flex: 1;
+  margin-top: 80px; 
 }
 
+/* GRADE GERAL */
 .bento-grid {
-  grid-template-columns: 2fr;
-  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
 }
 
 /* NAVBAR */
@@ -52,20 +56,49 @@ main {
 /* BOTÕES SOCIAIS */
 .social-buttons {
   display: flex;
-  justify-content: center;   
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;           
+  flex-wrap: wrap;
   width: 100%;
   text-align: center;
 }
 
-/* SOBRE MIM E PROJETOS */
+/* SOBRE MIM */
+.about-card {
+  width: 100%;
+}
+
+.about-content {
+  padding: 1rem;
+}
+
+/* PROJETOS */
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.project-card img {
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Ajustes visuais dos cards */
 .about-card,
 .project-card {
   padding: 0.3rem;
   font-size: 1rem;
-  margin-top: 0;
-  scroll-margin-top: 5rem;display: flex;
+  scroll-margin-top: 5rem;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
