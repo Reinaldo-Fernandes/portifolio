@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <head>
-    <!-- Metadados básicos -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio - Reinaldo</title>
-  
-    <!-- Fontes Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
-  
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/styles.css" />
-    <link rel="stylesheet" href="./src/css/mobile.css" media="only screen and (max-width: 768px)"/>
-  
-    <!-- Font Awesome (ícones) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Metadados básicos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Reinaldo</title>
 
-  </head>
-  
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="./src/css/reset.css" />
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <link rel="stylesheet" href="./src/css/mobile.css" media="only screen and (max-width: 768px)" />
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <nav class="navbar">
     <div class="logo">
@@ -34,94 +31,77 @@
       </div>
     </div>
   </nav>
-  
-      
-  <main class="bento-grid">
 
-     <!-- Sobre Mim -->
-     <div class="about-card glow-card fade-in">
-      <div class="about-card">
-        <div class="about-content">
-          <h2 class="description">Sobre Mim</h2>
-          <p >
-            Olá! Me chamo Reinaldo Fernandes, sou desenvolvedor apaixonado por transformar ideias em experiências digitais reais. Trabalho com HTML, CSS, JavaScript e estou sempre buscando aprender mais sobre o ecossistema web moderno.
-          </p>
-          <p>
-            Já atuei com montagem de computadores, projetos de sites, automação e criação de experiências interativas — e estou sempre aberto a novas colaborações!
-          </p>
-          <div class="social-buttons">
-            <a href="https://github.com/Reinaldo-Fernandes" class="github-btn" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/reinaldo.f.menezes/" class="instagram-btn" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href=https://www.linkedin.com/in/reinaldo-fernandes-4a639a2b1/" class="linkedin-btn" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-          
-          
+  <main class="bento-grid">
+    <!-- Sobre Mim -->
+    <div class="about-card glow-card fade-in">
+      <div class="about-content">
+        <h2 class="description">Sobre Mim</h2>
+        <p>Olá! Me chamo Reinaldo Fernandes, sou desenvolvedor apaixonado por transformar ideias em experiências digitais reais. Trabalho com HTML, CSS, JavaScript e estou sempre buscando aprender mais sobre o ecossistema web moderno.</p>
+        <p>Já atuei com montagem de computadores, projetos de sites, automação e criação de experiências interativas — e estou sempre aberto a novas colaborações!</p>
+        <div class="social-buttons">
+          <a href="https://github.com/Reinaldo-Fernandes" class="github-btn" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/reinaldo.f.menezes/" class="instagram-btn" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/reinaldo-fernandes-4a639a2b1/" class="linkedin-btn" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
       </div>
     </div>
-    
-    <!-- Projetos  -->
-    <div class="project-card">
-      <div class="card-image">
-        <source srcset="src/image/curriculo.png " media="(min-width: 768px)">
-        <img src="src/image/curriculocel.png  "  alt="Projeto 1">
+
+    <!-- Projetos -->
+    <div class="projects-container">
+      <div class="project-card">
+        <div class="card-image">
+          <source srcset="src/image/curriculo.png " media="(min-width: 768px)">
+          <img src="src/image/curriculocel.png" alt="Projeto 1">
+        </div>
+        <div class="card-content">
+          <h3>Currículo Fácil</h3>
+          <p>#Bem-vindo ao Criador de Currículos - uma página projetada para simplificar a criação de currículos profissionais e personalizados!</p>
+          <a href="https://curriculo-facil.vercel.app/" target="_blank">Ver Projeto</a>
+        </div>
       </div>
-      <div class="card-content">
-        <h3>Currículo Fácil </h3>
-        <p>#Bem-vindo ao Criador de Currículos - uma página projetada para simplificar a criação de currículos profissionais e personalizados! Com uma interface intuitiva e funcionalidades práticas, nossa ferramenta permite que você desenvolva currículos impressionantes em minutos.</p>
-        <a href="https://curriculo-facil.vercel.app/"  target="_blank">Ver Projeto</a>
+
+      <div class="project-card">
+        <div class="card-image">
+          <source srcset="src/image/barbearia 1.png " media="(min-width: 768px)">
+          <img src="src/image/barbearia 1.png" alt="Projeto 2">
+        </div>
+        <div class="card-content">
+          <h3>Barbearia Site</h3>
+          <p>#Sistema moderno e intuitivo para agendamento de serviços de barbearia com integração ao WhatsApp.</p>
+          <a href="https://reinaldo-fernandes.github.io/sistema-barbearia/" target="_blank">Ver Projeto</a>
+        </div>
       </div>
-      
+
+      <div class="project-card">
+        <div class="card-image">
+          <source srcset="src/image/financa.png" media="(min-width: 768px)">
+          <img src="src/image/financa.png" alt="Projeto 3">
+        </div>
+        <div class="card-content">
+          <h3>Minhas Finanças</h3>
+          <p>#Ajuda jovens a entender e aplicar conceitos financeiros de maneira simples e prática.</p>
+          <a href="https://reinaldo-fernandes.github.io/minha-financa/#calculadora" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-image">
+          <source srcset="src/image/em breve.gif" media="(min-width: 768px)">
+          <img src="src/image/em breve.gif" alt="Projeto em breve">
+        </div>
+        <div class="card-content">
+          <h3>Próximos Projetos</h3>
+          <p>#Em Breve...</p>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-      <div class="card-image">
-        <source srcset="src/image/barbearia 1.png " media="(min-width: 768px)">
-        <img src="src/image/barbearia 1.png"  alt="Projeto 1">
-      </div>
-      <div class="card-content">
-        <h3>Barbearia Site </h3>
-        <p>#Sistema moderno e intuitivo para agendamento de serviços de barbearia, como corte masculino, barba estilizada e limpeza de pele. A plataforma oferece uma experiência fluida e responsiva, com integração direta com o WhatsApp para facilitar o contato. 
-
-        </p>
-        <a href="https://reinaldo-fernandes.github.io/sistema-barbearia/"  target="_blank">Ver Projeto</a>
-      </div>
-      
-    </div>
-
-       <div class="project-card">
-      <div class="card-image">
-        <source srcset="src/image/financa.png" media="(min-width: 768px)">
-        <img src="src/image/financa.png"  alt="Projeto 1">
-      </div>
-      <div class="card-content">
-        <h3>Minhas Finanças </h3>
-        <p>#A página Dicas Financeiras para Jovens foi criada com o objetivo de ajudar jovens a entenderem e aplicarem conceitos financeiros de maneira simples e prática.
-
-        </p>
-        <a href="https://reinaldo-fernandes.github.io/minha-financa/#calculadora"  target="_blank">Ver Projeto</a>
-      </div>
-      
-    </div>
-
-    <div class="project-card">
-      <div class="card-image">
-        <source srcset="src/image/em breve.gif " media="(min-width: 768px)">
-        <img src="src/image/em breve.gif"  alt="Projeto 1">
-      </div>
-      <div class="card-content">
-        <h3>Proximos Projetos</h3>
-        <p>#Em Breve...</p>
-      </div>
-      
-    </div>
-    
   </main>
 
   <footer>
