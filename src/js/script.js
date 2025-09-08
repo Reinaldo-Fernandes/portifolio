@@ -28,3 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeEls.forEach(el => observer.observe(el));
 
 
+//Cursor
+
+const texto = "Hello Word!";
+const elemento = document.getElementById("textoDigitando");
+
+let i = 0;
+
+function digitar() {
+  if (i < texto.length) {
+    elemento.textContent += texto.charAt(i);
+    i++;
+    setTimeout(digitar, 150); // velocidade da digitação (150ms por letra)
+  }
+}
+
+digitar();
