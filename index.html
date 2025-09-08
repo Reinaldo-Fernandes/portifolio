@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Metadados básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio - Reinaldo</title>
 
-  <meta property="og:title" content="Reinaldo Fernandes - Desenvolvedor Full-Stack" />
-  <meta property="og:description" content="Olá! Me chamo Reinaldo Fernandes, sou desenvolvedor apaixonado por transformar ideias em experiências digitais reais. Confira meus projetos!" />
-  <meta property="og:image" content="https://reinaldo-portifolio.vercel.app/src/image/sua-imagem-de-previsualizacao.png" />
-  <meta property="og:url" content="https://reinaldo-portifolio.vercel.app/" />
-
+  <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
 
+  <!-- Estilos CSS -->
   <link rel="stylesheet" href="./src/css/reset.css" />
   <link rel="stylesheet" href="./src/css/styles.css" />
   <link rel="stylesheet" href="./src/css/mobile.css" media="only screen and (max-width: 768px)" />
 
+  <!-- Font Awesome (ícones) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -34,18 +33,12 @@
   </nav>
 
   <main class="bento-grid">
+    <!-- Sobre Mim -->
     <div class="about-card glow-card fade-in">
       <div class="about-content">
-        <h2 class="description">Hello, World!</h2>
+        <h2 class="description"><span id="textoDigitando"></span><span class="cursor">|</span></h2>
         <p>Olá! Me chamo Reinaldo Fernandes, sou desenvolvedor apaixonado por transformar ideias em experiências digitais reais. Trabalho com HTML, CSS, JavaScript e estou sempre buscando aprender mais sobre o ecossistema web moderno.</p>
         <p>Já atuei com montagem de computadores, projetos de sites, automação e criação de experiências interativas — e estou sempre aberto a novas colaborações!</p>
-
-            <h2>Habilidades</h2>
-                <p>
-                    <strong>Linguagens:</strong> HTML <i class="fa-brands fa-html5"></i>, CSS <i class="fa-brands fa-css3-alt"></i>, JavaScript <i class="fa-brands fa-js"></i>, Python <i class="fa-brands fa-python"></i><br>
-                    <strong>Bancos de Dados:</strong> SQL, MySQL  <br>
-                    <strong>Ferramentas & Outros:</strong> Git, GitHub, VS Code, Vercel
-                </p>
         <div class="social-buttons">
           <a href="https://github.com/Reinaldo-Fernandes" class="github-btn" target="_blank" aria-label="GitHub">
             <i class="fab fa-github"></i>
@@ -60,6 +53,7 @@
       </div>
     </div>
 
+    <!-- Projetos -->
     <div class="projects-container">
       <div class="project-card">
         <div class="card-image">
@@ -72,7 +66,8 @@
           <a href="https://curriculo-facil.vercel.app/" target="_blank">Ver Projeto</a>
         </div>
       </div>
-
+      
+        <!--  Barbearia  -->
       <div class="project-card">
         <div class="card-image">
           <source srcset="src/image/barbearia 1.png " media="(min-width: 768px)">
@@ -85,6 +80,8 @@
         </div>
       </div>
 
+      
+        <!--  Minha Financas  -->
       <div class="project-card">
         <div class="card-image">
           <source srcset="src/image/financa.png" media="(min-width: 768px)">
@@ -97,7 +94,9 @@
         </div>
       </div>
 
-      <div class="project-card">
+      
+        <!--  Gerenciador de Habilidades -->
+         <div class="project-card">
         <div class="card-image">
           <source srcset="src/image/financa.png" media="(min-width: 768px)">
           <img src="src/image/habilidades.png" alt="Projeto 3">
@@ -109,6 +108,7 @@
         </div>
       </div>
 
+        <!--  VidaHub  -->
       <div class="project-card">
         <div class="card-image">
           <source srcset="src/image/financa.png" media="(min-width: 768px)">
@@ -117,12 +117,26 @@
         <div class="card-content">
           <h3>Vidahub</h3>
           <p>#Painel de produtividade compacto que facilita seu dia a dia!
-            <li>Lista de Tarefas Inteligentes, Relógio + Dados, Clima em tempo real, Links Rápidos</li> 
+           <li>Lista de Tarefas Inteligentes, Relógio + Dados, Clima em tempo real, Links Rápidos</li> 
           </p>
           <a href="https://github.com/Reinaldo-Fernandes/Vidahub-app" target="_blank">Ver Projeto</a>
         </div>
       </div>
-
+      
+        <!--  Portfólio de Marketing -->
+      <div class="project-card">
+        <div class="card-image">
+          <source srcset="src/image/curriculo.png " media="(min-width: 768px)">
+          <img src="src/image/portifolio.png" alt="Projeto 1">
+        </div>
+        <div class="card-content">
+          <h3>Portfólio de Marketing</h3>
+          <p>#Portfólio desenvolvido para a área de Marketing, incluindo uma apresentação institucional, uma seção dedicada ao portfólio de projetos, informações de contato e links para as redes sociais. </p>
+          <a href="https://reinaldo-fernandes.github.io/portifolio-marketing/" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+    
+        <!-- Projeto em Breve -->
       <div class="project-card">
         <div class="card-image">
           <source srcset="src/image/em breve.gif" media="(min-width: 768px)">
@@ -131,7 +145,6 @@
         <div class="card-content">
           <h3>Próximos Projetos</h3>
           <p>#Em Breve...</p>
-          
         </div>
       </div>
     </div>
