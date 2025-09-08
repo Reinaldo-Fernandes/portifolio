@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Rubik';
   background: #221919;
@@ -36,6 +37,18 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+/*Cursor*/
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .profile-card img {
