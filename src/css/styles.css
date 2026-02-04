@@ -1,3 +1,4 @@
+/* --- Variáveis Globais --- */
 :root {
     --bg: #0a0a0a;
     --accent: #d4a373; 
@@ -7,20 +8,33 @@
     --glass-border: rgba(255, 255, 255, 0.08);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+/* --- Reset & Base --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    cursor: auto; /* Cursor padrão restaurado */
+}
 
 body {
     background-color: var(--bg);
     color: var(--text);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
 /* --- Efeito de Textura (Grain) --- */
 .grain-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_pnt_noise.png');
-    opacity: 0.03; pointer-events: none; z-index: 9998;
+    opacity: 0.03; 
+    pointer-events: none; 
+    z-index: 9998;
     animation: grain 0.5s steps(1) infinite;
 }
 
@@ -32,66 +46,189 @@ body {
 
 /* --- Navbar & Logo --- */
 .navbar {
-    padding: 1.5rem 10%; display: flex; justify-content: space-between; align-items: center;
-    position: fixed; width: 100%; z-index: 1000; background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(10px);
-}
-.profile-card img { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--accent); }
-
-/* --- Bento Grid Layout --- */
-.bento-grid {
-    padding: 120px 10% 60px;
-    display: flex; flex-direction: column; gap: 3rem;
-    max-width: 1400px; margin: 0 auto;
-}
-
-.card-glass {
-    background: var(--glass); backdrop-filter: blur(15px);
-    border: 1px solid var(--glass-border); border-radius: 24px; padding: 2.5rem;
+    padding: 1.5rem 10%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed; 
+    width: 100%; 
+    z-index: 1000; 
+    background: rgba(10, 10, 10, 0.7); 
+    backdrop-filter: blur(10px);
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .logo h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.8rem;
-  color: var(--primary);
-  letter-spacing: 1px;
-  align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text);
+    letter-spacing: 1px;
+}
+
+.profile-card img { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    border: 2px solid var(--accent); 
+}
+
+/* --- Bento Grid Layout --- */
+.bento-grid {
+    padding: 140px 10% 60px;
+    display: flex; 
+    flex-direction: column; 
+    gap: 2.5rem;
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+
+.card-glass {
+    background: var(--glass); 
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border); 
+    border-radius: 24px; 
+    padding: 2.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.card-glass:hover {
+    border-color: rgba(212, 163, 115, 0.3);
 }
 
 /* --- Hero & Typography --- */
-.hero-title { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.1; margin-bottom: 1rem; }
-.hero-title .italic { font-family: 'Playfair Display', serif; font-style: italic; color: var(--accent); }
-.description-type { font-size: 1.2rem; color: var(--accent); margin-bottom: 2rem; height: 1.5rem; }
+.hero-title { 
+    font-size: clamp(2.5rem, 6vw, 5rem); 
+    line-height: 1.1; 
+    margin-bottom: 1rem; 
+}
 
-.skill-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.hero-title .italic { 
+    font-family: 'Playfair Display', serif; 
+    font-style: italic; 
+    color: var(--accent); 
+}
+
+.description-type { 
+    font-size: 1.2rem; 
+    color: var(--accent); 
+    margin-bottom: 2rem; 
+    height: 1.5rem; 
+    font-weight: 300;
+}
+
+.skill-tags { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 15px; 
+}
+
 .skill-tags span { 
-    background: rgba(212, 163, 115, 0.1); padding: 5px 15px; 
-    border-radius: 20px; font-size: 0.85rem; border: 1px solid rgba(212, 163, 115, 0.2); 
+    background: rgba(212, 163, 115, 0.1); 
+    padding: 6px 16px; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    border: 1px solid rgba(212, 163, 115, 0.2); 
+    color: var(--text-dim);
 }
 
-/* --- Mini Cards de Projetos --- */
+/* --- Projetos --- */
 .projects-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1.5rem;
 }
-.project-card { padding: 1.5rem; transition: 0.4s ease; }
-.project-card:hover { transform: translateY(-10px); border-color: var(--accent); }
-.card-image { height: 180px; overflow: hidden; border-radius: 15px; margin-bottom: 1.2rem; }
-.card-image img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: 0.5s; }
-.project-card:hover img { opacity: 1; }
 
-/* --- Footer Social --- */
-.footer-modern { padding: 4rem 10%; text-align: center; border-top: 1px solid var(--glass-border); }
-.footer-socials { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; }
-.footer-socials a { color: var(--text-dim); font-size: 1.6rem; transition: 0.3s; }
-.footer-socials a:hover { color: var(--accent); transform: translateY(-5px); }
+.project-card { 
+    padding: 1.5rem; 
+    transition: all 0.4s ease; 
+    cursor: pointer;
+}
 
-/* --- Three.js & Cursor --- */
-#cursor { width: 20px; height: 20px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; }
-#canvas-container { position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; }
+.project-card:hover { 
+    transform: translateY(-8px); 
+    background: rgba(255, 255, 255, 0.04);
+}
 
+.card-image { 
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 16px; 
+    margin-bottom: 1.2rem; 
+}
+
+.card-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 0.6; 
+    transition: 0.5s ease; 
+}
+
+.project-card:hover img { 
+    opacity: 1; 
+    transform: scale(1.05);
+}
+
+/* --- Footer --- */
+.footer-modern { 
+    padding: 4rem 10%; 
+    text-align: center; 
+    border-top: 1px solid var(--glass-border); 
+}
+
+.footer-socials { 
+    display: flex; 
+    justify-content: center; 
+    gap: 2.5rem; 
+    margin-bottom: 1.5rem; 
+}
+
+.footer-socials a { 
+    color: var(--text-dim); 
+    font-size: 1.5rem; 
+    transition: 0.3s; 
+}
+
+.footer-socials a:hover { 
+    color: var(--accent); 
+    transform: translateY(-3px); 
+}
+
+/* --- Cenário Tech (Three.js) --- */
+#canvas-container { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: -1; 
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none;
+}
+
+/* --- Cursor Customizado (Desativado) --- */
+#cursor { 
+    display: none; /* Desativado conforme solicitado */
+}
+
+/* --- Utilitários --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,18 +1,16 @@
 /**
- * REINALDO.DEV - Cyber-Cafe Engine
+ * REINALDO.DEV - Serenity Tech Engine
  */
 
 const CONFIG = {
     color: 0xd4a373, 
     nodes: 60,
-    connectionDist: 3.8,
-    cursorLerp: 0.12
+    connectionDist: 3.8
 };
 
 class Portfolio {
     constructor() {
         this.container = document.getElementById('canvas-container');
-        this.cursor = { el: document.getElementById('cursor'), x: 0, y: 0, targetX: 0, targetY: 0 };
         this.points = [];
         this.init();
     }
@@ -22,6 +20,7 @@ class Portfolio {
         this.createElements();
         this.setupEvents();
         this.animate();
+        // Chamada única para a digitação
         this.startTyping("System.out.println('Welcome to my world');");
     }
 
@@ -36,7 +35,6 @@ class Portfolio {
     }
 
     createElements() {
-        // Estilo Game: Partículas com brilho sutil
         const geo = new THREE.BufferGeometry();
         const pos = new Float32Array(CONFIG.nodes * 3);
         this.velocities = [];
@@ -47,15 +45,14 @@ class Portfolio {
             pos[i * 3 + 2] = (Math.random() - 0.5) * 15;
             
             this.velocities.push(new THREE.Vector3(
-                (Math.random() - 0.5) * 0.02,
-                (Math.random() - 0.5) * 0.02,
+                (Math.random() - 0.5) * 0.015,
+                (Math.random() - 0.5) * 0.015,
                 (Math.random() - 0.5) * 0.01
             ));
         }
 
         geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
         
-        // Material Estilo Code/Terminal
         this.particleMat = new THREE.PointsMaterial({
             color: CONFIG.color,
             size: 0.12,
@@ -67,11 +64,10 @@ class Portfolio {
         this.pointsMesh = new THREE.Points(geo, this.particleMat);
         this.scene.add(this.pointsMesh);
 
-        // Linhas de Conexão (Network Tech)
         this.lineMat = new THREE.LineBasicMaterial({ 
             color: CONFIG.color, 
             transparent: true, 
-            opacity: 0.15 
+            opacity: 0.12 
         });
     }
 
@@ -80,16 +76,13 @@ class Portfolio {
         const linePoints = [];
 
         for (let i = 0; i < CONFIG.nodes; i++) {
-            // Movimentação
             positions[i * 3] += this.velocities[i].x;
             positions[i * 3 + 1] += this.velocities[i].y;
             positions[i * 3 + 2] += this.velocities[i].z;
 
-            // Bounce (Efeito de Arena de Jogo)
             if (Math.abs(positions[i * 3]) > 15) this.velocities[i].x *= -1;
             if (Math.abs(positions[i * 3 + 1]) > 15) this.velocities[i].y *= -1;
 
-            // Busca por conexões próximas
             for (let j = i + 1; j < CONFIG.nodes; j++) {
                 const dx = positions[i * 3] - positions[j * 3];
                 const dy = positions[i * 3 + 1] - positions[j * 3 + 1];
@@ -116,38 +109,28 @@ class Portfolio {
         requestAnimationFrame(() => this.animate());
         this.updateAnims();
         
-        // Efeito pulso "Heartbeat" de Game
-        const pulse = 0.8 + Math.sin(Date.now() * 0.002) * 0.2;
+        const pulse = 0.6 + Math.sin(Date.now() * 0.0015) * 0.2;
         this.particleMat.opacity = pulse;
 
-        this.handleCursor();
         this.renderer.render(this.scene, this.camera);
-    }
-
-    handleCursor() {
-        this.cursor.x += (this.cursor.targetX - this.cursor.x) * CONFIG.cursorLerp;
-        this.cursor.y += (this.cursor.targetY - this.cursor.y) * CONFIG.cursorLerp;
-        this.cursor.el.style.transform = `translate3d(${this.cursor.x}px, ${this.cursor.y}px, 0)`;
     }
 
     startTyping(text) {
         const target = document.getElementById('textoDigitando');
+        if (!target) return;
+        target.innerHTML = ""; // Limpa antes de começar
         let i = 0;
         const type = () => {
             if (i < text.length) {
                 target.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(type, 50);
+                setTimeout(type, 70);
             }
         };
         type();
     }
 
     setupEvents() {
-        window.addEventListener('mousemove', e => {
-            this.cursor.targetX = e.clientX;
-            this.cursor.targetY = e.clientY;
-        });
         window.addEventListener('resize', () => {
             this.camera.aspect = window.innerWidth / window.innerHeight;
             this.camera.updateProjectionMatrix();
@@ -156,50 +139,30 @@ class Portfolio {
     }
 }
 
+// Inicialização
 new Portfolio();
-// Animações simples ao carregar os blocos
+
+// Animações de Scroll e Bento Boxes
 document.addEventListener("DOMContentLoaded", () => {
     const boxes = document.querySelectorAll(".bento-box");
     boxes.forEach((box, index) => {
-      box.style.opacity = 0;
-      box.style.transform = "translateY(20px)";
-      setTimeout(() => {
-        box.style.transition = "all 0.6s ease";
-        box.style.opacity = 1;
-        box.style.transform = "translateY(0)";
-      }, index * 150);
+        box.style.opacity = 0;
+        box.style.transform = "translateY(20px)";
+        setTimeout(() => {
+            box.style.transition = "all 0.6s cubic-bezier(0.23, 1, 0.32, 1)";
+            box.style.opacity = 1;
+            box.style.transform = "translateY(0)";
+        }, index * 100);
     });
-  });
 
-  //animação sobre mim
-  const fadeEls = document.querySelectorAll('.fade-in');
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
-
-  fadeEls.forEach(el => observer.observe(el));
-
-
-//Cursor
-
-const texto = "Hello Word!";
-const elemento = document.getElementById("textoDigitando");
-
-let i = 0;
-
-function digitar() {
-  if (i < texto.length) {
-    elemento.textContent += texto.charAt(i);
-    i++;
-    setTimeout(digitar, 150); // velocidade da digitação (150ms por letra)
-  }
-}
-
-digitar();
+    fadeEls.forEach(el => observer.observe(el));
+});
