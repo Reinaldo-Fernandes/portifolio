@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reinaldo Fernandes | Dev & Coffee</title>
+
+  <meta name="description" content="Portfólio de Reinaldo Fernandes - Desenvolvedor Full Stack apaixonado por tecnologia e café.">
+  <meta name="author" content="Reinaldo Fernandes">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;600;800&family=Rubik:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./src/css/reset.css" />
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <link rel="stylesheet" href="./src/css/mobile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <div id="canvas-container"></div>
+  <div id="cursor"></div>
+  <div class="grain-overlay"></div>
+
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-terminal"></i>
+      <span class="name">Reinaldo.dev</span>
+      <div class="profile-card">
+        <img id="profileImage" src="src/image/N2.jpg" alt="Foto de Reinaldo Fernandes">
+      </div>
+    </div>
+  </nav>
+
+  <main class="bento-grid">
+    <section class="about-card card-glass fade-in">
+      <div class="about-content">
+        <h1 class="hero-title">
+          Transformando <span class="italic">Café</span> em <span class="highlight">Código</span>
+        </h1>
+       
+        
+        <div class="bio-text">
+          <p>Olá, sou <strong>Reinaldo Fernandes</strong>! Sou desenvolvedor apaixonado por transformar ideias em experiências digitais reais. Com experiência em HTML, CSS e JavaScript, busco criar soluções inovadoras no ecossistema web moderno.</p>
+          <p>Minha jornada começou no hardware, o que me deu uma base técnica sólida para hoje criar sites, automações e interfaces interativas de alto impacto.</p>
+        </div>
+
+        <div class="skills-mini-list">
+          <h3>Habilidades Core</h3>
+          <div class="skill-tags">
+            <span><i class="fab fa-html5"></i> HTML</span>
+            <span><i class="fab fa-css3-alt"></i> CSS</span>
+            <span><i class="fab fa-js"></i> JavaScript</span>
+            <span><i class="fab fa-python"></i> Python</span>
+            <span><i class="fas fa-database"></i> SQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <h2 class="section-label">02. Projetos Selecionados</h2>
+      <div class="projects-grid mini-cards">
+        
+         <article class="project-card card-glass">
+          <div class="card-image">
+            <img src="src/image/mindsphere.png" alt="MindSphere App Preview">
+          </div>
+          <div class="card-content">
+            <h3> MindSphere</h3>
+            <p>A produtividade não é uma linha reta. Cada cérebro tem seu ritmo, suas pausas e suas cores.</p>
+            <a href="https://mind-sphere-ten.vercel.app/" target="_blank" class="btn-link">Ver Projeto <i class="fas fa-external-link-alt"></i></a></a>
+          </div>
+        </article>
+
+        <article class="project-card card-glass">
+          <div class="card-image">
+            <img src="src/image/curriculocel.png" alt="Preview do Currículo Fácil">
+          </div>
+          <div class="card-content">
+            <h3>Currículo Fácil</h3>
+            <p>Simplificando a criação de currículos profissionais.</p>
+            <a href="https://curriculo-facil.vercel.app/" target="_blank" class="btn-link">Ver Projeto <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </article>
+
+        <article class="project-card card-glass">
+          <div class="card-image">
+            <img src="src/image/barbearia 1.png" alt="Sistema de Barbearia">
+          </div>
+          <div class="card-content">
+            <h3>Barbearia Site</h3>
+            <p>Agendamento moderno integrado ao WhatsApp.</p>
+            <a href="https://reinaldo-fernandes.github.io/sistema-barbearia/" target="_blank" class="btn-link">Ver Projeto <i class="fas fa-external-link-alt"></i></a></a>
+          </div>
+        </article>
+
+        <article class="project-card card-glass">
+          <div class="card-image">
+            <img src="src/image/Vidahub.jpg" alt="Vidahub Productivity App">
+          </div>
+          <div class="card-content">
+            <h3>Vidahub</h3>
+            <p>Painel de produtividade e links rápidos.</p>
+            <a href="https://github.com/Reinaldo-Fernandes/Vidahub-app" target="_blank" class="btn-link">Code Source</a>
+          </div>
+        </article>
+
+        <article class="project-card card-glass">
+          <div class="card-image">
+            <img src="src/image/habilidades.png" alt="Gerenciador de Habilidades">
+          </div>
+          <div class="card-content">
+            <h3>Skill Manager</h3>
+            <p>Gestão de competências com salvamento automático.</p>
+            <a href="https://reinaldo-fernandes.github.io/habilidades-competencia/" target="_blank" class="btn-link">Ver Projeto <i class="fas fa-external-link-alt"></i></a></a>
+          </div>
+        </article>
+
+        <article>
+             <div class="project-card">
+        <div class="card-image">
+          <source srcset="src/image/em breve.gif" media="(min-width: 768px)">
+          <img src="src/image/em breve.gif" alt="Projeto em breve">
+        </div>
+        <div class="card-content">
+          <h3>Próximos Projetos</h3>
+          <p>#Em Breve...</p>
+        </div>
+        </article>
+       
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-modern">
+    <div class="footer-socials">
+      <a href="https://github.com/Reinaldo-Fernandes" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/reinaldo-fernandes-4a639a2b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/reinaldo.f.menezes/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>© 2026 Reinaldo Fernandes — Desenvolvido com Café e Código</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  <script src="./src/js/script.js"></script>
+</body>
+</html>

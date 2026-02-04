@@ -1,0 +1,19 @@
+@media only screen and (max-width: 768px) {
+    * { cursor: auto !important; } /* Volta o cursor padrão no mobile */
+    #cursor { display: none; }
+
+    .navbar { padding: 1rem 5%; }
+    .bento-grid { padding: 100px 5% 40px; }
+    
+    .card-glass { padding: 1.5rem; }
+    
+    .hero-title { font-size: 2.2rem; }
+    
+    .projects-grid {
+        grid-template-columns: 1fr; /* Força uma coluna única */
+    }
+
+    .footer-socials { gap: 1.5rem; }
+    
+    .logo span { font-size: 0.9rem; }
+}
